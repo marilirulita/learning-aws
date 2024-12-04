@@ -1,15 +1,15 @@
-var AWS = require("aws-sdk");
-var fs = require('fs');
+import { config, DynamoDB } from "aws-sdk";
+import { readFileSync } from 'fs';
 
-AWS.config.update({
+config.update({
   region: "us-east-1"
 });
 
 console.log("Writing entries to GalleryImages table.");
 
-var dynamodb = new AWS.DynamoDB.DocumentClient();
+var dynamodb = new DynamoDB.DocumentClient();
 var galleryImagesData = 
-  JSON.parse(fs.readFileSync('../components/data/gallery_images.json', 'utf8'));
+  JSON.parse(readFileSync('../components/data/gallery_images.json', 'utf8'));
 
 galleryImagesData.forEach(function(galleryImage) {
   var className = galleryImage.className;
