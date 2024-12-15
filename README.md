@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [AWS](./tutoriale/aws-dynamoDB.md)
 
+[Live version](https://main.d1yr7t7mpp2jt9.amplifyapp.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
